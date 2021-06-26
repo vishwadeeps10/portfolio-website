@@ -1,0 +1,248 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{% block title %}About{% endblock %}</title>
+    <style>
+        body {
+            background: white center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            box-sizing: border-box;
+        }
+
+
+        .aboutpage {
+            height: 69vh;
+            width: 1000px;
+            background-color: white;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+            display: flex;
+            border-radius: 10px;
+            box-sizing: border-box;
+
+        }
+
+        .text {
+            width: 50%;
+            height: auto;
+
+
+        }
+
+        .text span {
+            color: blueviolet;
+            font-weight: 800;
+        }
+
+        .text h1 {
+            text-align: center;
+            font-size: 30px;
+            font-family: sans-serif;
+            margin-top: 35px;
+            margin-bottom: 2px;
+
+
+        }
+
+        hr {
+            width: 40%;
+            padding: 0;
+            margin-top: 0;
+            background-color: blueviolet;
+            height: 3px;
+
+        }
+
+        .text h3 {
+            margin-top: 0;
+            font-size: 19px;
+            font-weight: 500;
+            word-spacing: 1px;
+            padding: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: justify;
+            font-family: Courier New;
+            line-height: 1.4;
+            margin-bottom: 0px;
+
+        }
+
+        .btn-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .btn-resume {
+            padding: 0;
+            height: 35px;
+            width: 200px;
+            background-color: blueviolet;
+            color: white;
+            font-family: Courier New;
+            transition: 0.6s ease-in-out;
+
+
+
+        }
+
+        .btn-resume:hover {
+            background-color: transparent;
+            border: 2px solid blueviolet;
+            color: blueviolet;
+            cursor: pointer;
+            transition: 0.6s ease-in-out;
+        }
+
+        .text h4 {
+            margin-top: 0;
+            font-size: 19px;
+            font-weight: 500;
+
+            padding: 20px;
+            text-align: justify;
+            font-family: Courier New;
+            line-height: 1.9;
+            margin-bottom: 0px;
+            padding-bottom: 0;
+
+        }
+
+        .socal-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 0;
+        }
+
+        .socal-icons .socalicon-ul {
+            margin: 0;
+        }
+
+        .socal-icons .socalicon-ul li {
+            display: inline-flex;
+            padding: 10px;
+            font-size: 30px;
+        }
+
+        #instagram {
+            color: transparent;
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+
+        .image img {
+            max-height: 100%;
+            max-width: 100%;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+
+        }
+
+        @media only screen and (max-width: 923px) {
+            body {
+
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .aboutpage {
+                height: auto;
+                width: 85%;
+                background-color: white;
+                margin-top: 45%;
+                transform: translate(-50%, -50%);
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+                display: block;
+                border-radius: 10px;
+                box-sizing: border-box;
+
+            }
+
+            .image img {
+                display: block;
+
+
+            }
+
+            .text {
+                display: block;
+                position: relative;
+                height: 50%;
+                width: auto;
+
+
+            }
+
+            .image img {
+                max-height: 100%;
+                max-width: 100%;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="aboutpage">
+            <div class="image">
+                <img src="https://i.imgur.com/ALBWppr.jpg" alt="">
+            </div>
+            <div class="text">
+
+                <h1>About <span>Me</span></h1>
+                <hr>
+                <h3>Hello, I'm <span> Vishwadeep Singh.</span>I am pursing my B.Tech from Truba College of Science and
+                    Technology, Bhopal Madhaya Pardesh.
+                    I Know many languages like <span>Python, HTML, CSS, Bootstrap, Django Framwork.</span>
+                </h3>
+                <div class="btn-center">
+                    <a href="http://"><button class="btn-resume">Download my Resume</button></a>
+                </div>
+                <h4><i class="bi bi-envelope"></i> Email - Vishwadeeps10@gmail.com <br><i class="bi bi-phone"></i>
+                    Mobile- +91-7870888093 </h4>
+                <div class="socal-icons">
+                    <ul class="socalicon-ul">
+
+                        <li><a href="https://github.com/vishwadeeps10" target="_blank"><i class="bi bi-github"
+                                    style="color:black;"></i></a></li>
+                        <li> <a href="https://www.facebook.com/vishwadeep.singh.71/" target="_blank"><i
+                                    class="bi bi-facebook" style="color:#4267B2;"></i></a></li>
+                        <li><a href="https://www.instagram.com/rajput_deep10/" target="_blank"><i
+                                    class="bi bi-instagram" id="instagram"></i></a></li>
+                        <li><a href="https://twitter.com/mr_vishwadeep" target="_blank"><i class="bi bi-twitter"
+                                    style="color: #1DA1F2;"></i></a></li>
+
+
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
+{% endblock %}

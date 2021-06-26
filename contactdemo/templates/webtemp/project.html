@@ -1,0 +1,50 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .info{
+            font-family: sans-serif;
+            padding: 10px;
+            margin: 10px;
+        }
+        .info h1,h2{
+            color: rgb(255, 5, 255);
+            
+        }
+        .info .project-button{
+            margin-top: 10px;
+            height: 40px;
+            width: auto;
+            background-color: blueviolet;
+            color: white;
+            border-radius: 10px;
+            transition: 0.5s ease all;
+        }
+        .info .project-button:hover{
+            color: blueviolet;
+            background-color: transparent;
+            border: 2px solid blueviolet;
+        }
+    </style>
+    <title>{% block title %}Projects{% endblock %}</title>
+</head>
+<body>
+ <div class="container">
+    <div class="info">
+        <h1>This page is under maintenance.</h1>
+        <h2>I will Update this Soon.</h2>
+        <a href="/"><button class="project-button">Back to Home</button></a>
+    </div>
+
+
+ </div>
+</body>
+</html>
+
+
+
+
+{% endblock %}

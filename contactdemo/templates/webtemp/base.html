@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/png" sizes="40x40" href="https://i.imgur.com/PejhZ0Z.png">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+  <title>{% block title %}{% endblock %} | Vishwadeep Singh</title>
+
+
+  <style>
+    .navbar {
+      padding: 20px 0;
+      font-family: sans-serif;
+      font-weight: bold;
+      height: 80px;
+      z-index: 1;
+    }
+
+    .navbar-brand {
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 2rem;
+      color: #007bff;
+      font-family: Brush Script MT;
+    }
+
+    .nav-item {
+      text-transform: uppercase;
+      font-weight: 800;
+      margin-left: 25px;
+    }
+    #nav-icon{
+      font-size: 50px;
+      color: blueviolet;
+      border-bottom: 4xpx solid blueviolet;
+    }
+    
+
+    .navbar-nav .nav-item .nav-link:hover,
+    .navbar-nav .nav-item.active .nav-link {
+      background: blueviolet;
+      color: #ffff;
+      border-radius: 10px;
+      transition: 0.4s ease-in-out;
+
+
+    }
+
+    .navbar-nav .nav-item .nav-link {
+      color: blueviolet;
+      transition: 0.4s ease-in-out;
+
+
+    }
+
+    .navbar-toggler {
+      border: none;
+      color: #7f7f7f;
+      border: 2px solid #7f7f7f;
+
+
+    }
+
+    .navbar-toggler-icon {
+      color: black;
+      font-size: 10px;
+      text-align: center;
+
+    }
+
+    @media only screen and (max-width: 923px) {
+      .navbar-collapse {
+        background:#fff;
+        border: 2px solid black;
+        position: relative;
+        z-index: 3;
+      }
+
+      .navbar-nav .nav-item .nav-link:hover,
+      .navbar-nav .nav-item.active .nav-link {
+        border-radius: 0px;
+      }
+
+      .nav-item {
+        margin-left: 0px;
+        text-align: center;
+        padding-top: 7px;
+
+      }
+
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <!--navbar-->
+
+  <div class="container">
+
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="/"><i class="fab fa-vuejs" id="nav-icon"></i></a>
+      <button class="navbar-toggler  " type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+
+        <span class="navbar-toggler-icon ">Menu</span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link" href="/"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about"><i class="fas fa-user-tie"></i> about</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="project"><i class="fas fa-book-open"></i></i> Projects</a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href="contact"><i class="fas fa-phone-alt"></i> Contact</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </nav>
+  </div>
+
+  <!--navbar end-->
+  {% block content %} {% endblock %}
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script>
+
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

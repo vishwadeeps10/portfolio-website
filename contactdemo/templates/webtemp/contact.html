@@ -1,0 +1,115 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block content %}
+<html lang="en">
+
+<head>
+  <style>
+    .form-control {
+      border: 1px solid blueviolet;
+    }
+
+    label {
+      font-size: 15px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .form-group label span {
+      color: red;
+      font-size: 10px;
+
+    }
+    #contact-h5{
+      font-size: 15px;
+      font-weight: 600;
+      font-family:  sans-serif;
+      color: red;
+      background-color: yellow;
+      text-align: center;
+      padding: 5px;
+    }
+
+    #btnhover {
+      background-color: blueviolet;
+      transition: 0.6s ease-in-out;
+    }
+
+    #btnhover:hover {
+      background-color: white;
+      color: blueviolet;
+      border:2px solid blueviolet;
+      transition: 0.6s ease-in-out;
+    }
+
+    @media only screen and (max-width: 923px) {
+
+      .h2,
+      h2 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+      #contact-h5{
+        text-align: justify;
+        padding: 5px;
+        font-size: 17px;
+      }
+
+
+    }
+  </style>
+  <title>{% block title %}Contact{% endblock %}</title>
+</head>
+
+<body>
+  <section class="bodysection">
+    <form method="POST" action="contact">
+      {% csrf_token %}
+      <div class="container" id='formcontainer'>
+        <center>
+          <h2 id="contact-h2">Get in Touch</h2>
+          <h5 class="m-3" id="contact-h5">If you have come to my website, then please enter Your NAME, I will be glad that you come to my Website. Don't worry about the Email, Contact, Message area because it is optional. </h5>
+        </center>
+        {% for message in messages %}
+        <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+          <strong>Message: </strong>{{message}}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        {% endfor %}
+
+        <div class="form-group m-3">
+          <label for="name">Enter your Name:<span>*</span></label>
+          <input type="text" required="required" minlength="4" name="name" class="form-control" id="name"
+            aria-describedby="name" placeholder="Enter Name">
+
+        </div>
+        <div class="form-group m-3">
+          <label for="email_id">Email address:<span>(Optional)</span></label>
+          <input type="email" minlength="" maxlength="50" name="email_id" class="form-control" id="email_id"
+             aria-describedby="emailHelp" placeholder="Enter Email">
+          <small id="emailHelp" class="form-text text-muted"> &nbsp; We'll never share your email with anyone
+            else.</small>
+        </div>
+        <div class="form-group m-3">
+          <label for="phoneno">Contact No:<span>(Optional)</span></label>
+          <input type="tel" name="phoneno" minlength="" maxlength="15" class="form-control" 
+            id="phoneno" placeholder="Enter your Phone Number">
+        </div>
+        <div class="form-group m-3">
+          <label for="content">Discribe your message:<span>(Optional)</span></label>
+          <textarea class="form-control" minlength="" maxlength="1000"  name="content"
+            id="messagearea" cols="30" rows="6" placeholder="Write your Message Here."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary m-3" id="btnhover">SEND ME A NOTE</button>
+
+      </div>
+    </form>
+  </section>
+
+</body>
+
+</html>
+{% endblock %}
